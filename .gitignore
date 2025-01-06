@@ -171,4 +171,4 @@ cython_debug/
 .pypirc
 
 # Project Specific
-usernames.txt
+usernames*.txt
