@@ -11,8 +11,10 @@ def is_username_taken(username):
         if response.status_code == 429:
             print("mcuf: Rate limit exceeded.")
             # time.sleep(2) # Rate wait
+        elif response.status_code in [200, 404]:
+            found = True
         else:
-            break
+            print(f"mcuf: Unexpected status code: {response.status_code}, retrying...")
     return response.status_code == 200, response.status_code
 
 def find_usernames_of_length(length):
@@ -42,5 +44,7 @@ def find_usernames_of_length(length):
 
 if __name__ == "__main__":
     nltk.download('words')
-    length = int(input("mcuf: Enter the length of the username: "))
-    find_usernames_of_length(length)
+    # length = int(input("mcuf: Enter the length of the username: "))
+    lengths = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    for length in lengths:
+        find_usernames_of_length(length)
