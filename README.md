@@ -1,4 +1,6 @@
 # mc-username-finder
+See details on [the Google Sheet](https://docs.google.com/spreadsheets/d/1EAfpd9dP9b9U80upYjTxhqEm3H3WsXoFd2gcROYsn-4/edit).
+
 find minecraft usernames
 
 This script, for an unknown reason, sometimes includes names that are taken - however this rarely happens.
